@@ -1,0 +1,94 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing:border-box;
+}
+
+html,body{
+    height:100%;
+    width:100%;
+}
+body{
+    overflow: hidden;
+}
+#gamecontainer
+{ 
+    background-image: url(bg.png);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-color: rgb(50, 128, 195);
+    height:100%;
+    width: 100%;
+  
+}
+.gameover{
+    font-size: 2rem;
+    text-align: center;
+    visibility: hidden;
+}
+.dino{
+    position: absolute;
+    background-image: url(dino.png);
+    background-repeat: no-repeat;
+    height: 154px;
+    width: 184px;
+    background-size: contain;
+    bottom: 0;
+    left: 40px;
+    
+}
+.dinoAni{
+    transform: translateY(-50vh);
+}
+
+.obstacle{
+    position: absolute;
+    background-image: url(dragon.png);
+    background-repeat: no-repeat;
+    height: 154px;
+    width: 134px;
+    background-size: contain;
+   right: 20px;
+    bottom: 0;
+}
+.objanim{
+    animation:obAni 5s linear infinite ;
+
+}
+#scorecount{
+    width: 180px;
+    height: 40px;
+   margin: 0 80vw;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    padding: 5px;
+    text-align: center;
+}
+#reset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+   margin: 0 80vw;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5rem;
+    padding: 5px;
+    text-align: center;
+    visibility: hidden;
+}
+@keyframes obAni {
+    0%{ 
+        transform:translateX(10vw);
+    }
+   
+    100%{
+        transform: translateX(-120vw);
+     }
+
+}
