@@ -6,14 +6,14 @@ setTimeout(() => {
     audio.play()
 }, 1000);
 document.onkeydown=function(e){
-
+    // console.log(e.keyCode)
     d=document.querySelector('.dino');
-    if(e.keyCode==38){
+    if(e.keyCode==38 || e.keyCode==32){
        
         d.classList.add('dinoAni')
         setTimeout(() => {
             d.classList.remove('dinoAni')
-        }, 500);
+        }, 800);
     }
     else if(e.keyCode==39){
         let l=parseInt(window.getComputedStyle(d).left,10) || 40;
@@ -46,7 +46,7 @@ function leftframe(){
 leftframe();
 offsetX=Math.abs(ox-dx);
 offsetY=Math.abs(dy-oy);
-console.log(offsetY);
+// console.log(offsetY);
 
 
 if(offsetX<200 && offsetY<50){
@@ -70,15 +70,20 @@ if(offsetX<300 && cross){
     cross=false;
     setInterval(() => {
         cross=true;
-    }, 1000);
-    aniDur = parseFloat(window.getComputedStyle(ob, null).getPropertyValue('animation-duration'));
-    if(aniDur!=1)
-    setTimeout(() => {
-        aniDur = parseFloat(window.getComputedStyle(ob, null).getPropertyValue('animation-duration'));
-        newDur = aniDur - 0.2;
-        ob.style.animationDuration = newDur + 's';
-        console.log('New animation duration: ', newDur)
-    }, 500);
+    }, 100);
+    // aniDur = parseFloat(window.getComputedStyle(ob, null).getPropertyValue('animation-duration'));
+    if(score>10)
+    {
+        
+        // console.log('New animation duration: ', newDur)
+
+        setTimeout(() => {
+            aniDur = parseFloat(window.getComputedStyle(ob, null).getPropertyValue('animation-duration'));
+            newDur = aniDur - 0.2;
+            ob.style.animationDuration = newDur + 's';
+                }, 2000);
+    }
+   
 }
 
 },500)

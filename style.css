@@ -38,7 +38,7 @@ body{
     
 }
 .dinoAni{
-    transform: translateY(-50vh);
+    transform: translateY(-30vh);
 }
 
 .obstacle{
@@ -52,7 +52,7 @@ body{
     bottom: 0;
 }
 .objanim{
-    animation:obAni 5s linear infinite ;
+    animation:obAni 3s linear infinite ;
 
 }
 #scorecount{
