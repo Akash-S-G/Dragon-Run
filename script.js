@@ -2,6 +2,7 @@ score=0;
 cross=true;
 audio = new Audio('music.mp3');
 audiogo = new Audio('gameover.mp3');
+audio.currentTime = 29;
 setTimeout(() => {
     audio.play()
 }, 1000);
@@ -71,18 +72,7 @@ if(offsetX<300 && cross){
     setInterval(() => {
         cross=true;
     }, 100);
-    // aniDur = parseFloat(window.getComputedStyle(ob, null).getPropertyValue('animation-duration'));
-    if(score>10)
-    {
-        
-        // console.log('New animation duration: ', newDur)
-
-        setTimeout(() => {
-            aniDur = parseFloat(window.getComputedStyle(ob, null).getPropertyValue('animation-duration'));
-            newDur = aniDur - 0.2;
-            ob.style.animationDuration = newDur + 's';
-                }, 2000);
-    }
+   
    
 }
 
